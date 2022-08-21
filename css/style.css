@@ -1,0 +1,640 @@
+*{
+    padding:0;
+    margin:0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family:Arial, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background:#333;
+    height: 5000px;
+}
+.page-header{
+    color: #fff;
+    font-size:13px;
+    padding-bottom:1px;
+    text-transform:capitalize;
+    letter-spacing:2px;
+    text-align:center;
+}
+.page-NavBar{
+    display:flex;
+    justify-content:space-around;
+    background:#222;
+    padding:5px;
+    position: fixed;
+    width: 100%;
+    -webkit-box-shadow: 2px 2px 2px #000;
+    -moz-box-shadow: 2px 2px 2px #000;
+    -o-box-shadow: 2px 2px 2px #000;
+    box-shadow: 2px 2px 2px #000;
+    z-index:10
+}
+.page-NavBar .logo{
+    color:#FFF;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+.page-NavBar .logo::first-letter{
+    font-size: 30px;
+}
+.page-NavBar .navBar-list{
+    list-style-type:none;
+}
+.page-NavBar .navBar-list li{
+    display:inline-block;
+    cursor:pointer;
+    padding: 8px 5px;
+}
+.page-NavBar .navBar-list li a{
+    color:#DDD;
+    text-transform:uppercase;
+    text-decoration:none;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:18px;
+}
+.page-NavBar .responsive-btn{
+    color:#FFF;
+    text-transform:uppercase;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:18px;
+    background:#222;
+    border:0px;
+    display:none;
+}
+.main-section{
+    margin: 150px auto;
+    text-align: center;
+}
+.main-section .main-section-heading{
+    color:#FFF;
+    letter-spacing:2px;
+    text-transform:capitalize;
+    font-weight:300;
+    padding:8px;
+    border-bottom: 2px solid #EEE;
+    width:260px;
+    text-align: center;
+    margin: 0px auto;
+}
+.main-section .main-section-paragraph{
+    color:#FFF;
+    letter-spacing:2px;
+    text-transform:capitalize;
+    padding:8px;
+    width: 700px;
+    text-align:center;
+    margin: 30px auto;
+}
+.main-section .btns-container{
+    margin: 50px auto;
+}
+.main-section .btns-container button{
+    padding:8px;
+    border-radius:20px;
+    text-transform:uppercase;
+    color:#EEE;
+    background:-webkit-linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    background:-moz-linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    background:-o-linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    background:linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    border:0px;
+    cursor:pointer;
+    font-size:21px;
+    margin: 0 30px 0 30px;
+    width:260px;
+}
+.svg-waves{
+    position: relative;
+    bottom: -36px;
+}
+.svg-waves-2{
+    position: relative;
+    bottom: 30px;
+    transform:rotate(180deg)
+}
+.roadMap{
+    background:#EEE;
+    min-height:600px;
+    padding:15px;
+    margin:30px auto;
+    text-align:center;
+}
+.roadMap .roadMap-header{
+    color:#222;
+    font-size:40px;
+    border-bottom:2px solid #222;
+    width:500px;
+    margin:0px auto;
+    text-align: center;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+.roadMap .roadMap-first-detail{
+    position:relative;
+    width:600px;
+    height: 300px;
+    border-radius:4px;
+    border:0px;
+    text-align:center;
+    margin: 30px auto;
+}
+.roadMap .roadMap-first-detail::after{
+    position:absolute;
+    width:2px;
+    height: 100%;
+    margin:auto;
+    top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content:"";
+    background:rgb(0, 115, 255);
+}
+.roadMap .roadMap-first-detail > div{
+    background:rgb(0, 115, 255);
+    border-radius:5px;
+    position:relative;
+    padding:10px;
+    margin: 10px;
+    width:300px;
+    text-align:left;
+    cursor:pointer;
+    -webkit-transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    -o-transition: all .4s linear;
+    transition: all .4s linear;
+}
+.roadMap .roadMap-first-detail div:hover{
+    transform:scale(1.2)
+}
+.roadMap .roadMap-first-detail div span i{
+    font-size:30px;
+    color:#FFF;
+    padding:5px;
+    border-radius:50%;
+}
+.roadMap .roadMap-first-detail div header{
+    color:#FFF;
+    text-transform:uppercase;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing:3px;
+    display: inline-block;
+    text-decoration:underline;
+    font-weight:bold;
+}
+.roadMap .roadMap-first-detail div p{
+    color:#333;
+    text-transform:uppercase;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing:3px;
+}
+.roadMap .roadMap-first-detail .html, 
+.roadMap .roadMap-first-detail .javascript{
+    left: -30px;
+}
+.roadMap .roadMap-first-detail .css{
+    float: right;
+    right: -30px;
+}
+.roadMap .roadMap-first-detail .css p{
+    padding-top: 15px;
+}
+.roadMap .roadMap-first-detail .javascript{
+    margin-top: 150px;
+}
+.roadMap .roadMap-first-detail div::after{
+    position: absolute;
+    content:"";
+    background:rgb(0, 115, 255);
+    padding:15px;
+    transform:rotate(50deg);
+    top: 0;
+    margin: 30px 0 ;
+    border-radius:4px;
+}
+.roadMap .roadMap-first-detail .html::after{
+    right: -7px;
+}
+.roadMap .roadMap-first-detail .css::after{
+    left: -7px;
+    margin-top: 36px;
+}
+.roadMap .roadMap-first-detail .javascript::after{
+    right: -7px;
+}
+.html-roadMap{
+    text-align:center;
+    margin:0px auto;
+    padding:15px;
+}
+.html-roadMap .html-header{
+    color:#FFF;
+    font-size:40px;
+    border-bottom:2px solid #FFF;
+    width:400px;
+    margin:0px auto;
+    text-align: center;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+.html-roadMap .html-brief{
+    color:#EEE;
+    padding:10px;
+    width:100%;
+    margin:10px auto;
+    display:block;
+    text-transform:capitalize;
+    font-size:19px;
+}
+.html-roadMap .html-example{
+    color:#333;
+    font-size:24px;
+    font-weight:bold;
+    padding:10px;
+    width:800px;
+    margin: 10px auto;
+    text-align: left;
+    font-family:"Tw Cen MT", sans-serif;
+    display:flex;
+    flex-direction:column;
+    background:#EEE;
+    border-radius:4px;
+    -webkit-box-shadow:5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222;
+    -moz-box-shadow:5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222;
+    -o-box-shadow:5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222;
+    box-shadow:5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222;
+}
+.html-roadMap .html-example .html-example-detail{
+    padding:10px;
+    outline:none;
+}
+.html-roadMap .html-example .html-example-detail.go-right{
+    margin-left:50px;
+}
+.html-roadMap .html-example .html-example-detail.go-right-again{
+    margin-left:90px;
+}
+.html-roadMap .html-example .google-example{
+    padding:5px;
+    text-transform:uppercase;
+    color:#333;
+    cursor:pointer;
+    font-family:"Tw Cen MT", sans-serif;
+}
+.html-roadMap .html-example .a-tag{
+    padding:0px;
+    text-transform:lowercase;
+    color:#333;
+    text-decoration:none;;
+    cursor:text;
+    font-family:"Tw Cen MT", sans-serif;
+}
+.html-roadMap .html-btns{
+    margin:20px auto;
+    display:flex;
+    justify-content:center;
+}
+.html-roadMap .html-btns button{
+    font-size:21px;
+    padding:10px;
+    border-radius:20px;
+    width:260px;
+    border:0px;
+    cursor:pointer;
+    margin: 0px 10px;
+    text-transform:capitalize;
+    color:#EEE;
+    letter-spacing: 3px;
+    background:-webkit-linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    background:-moz-linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    background:-o-linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    background:linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    -webkit-transition: all .4s linear;;
+    -moz-transition: all .4s linear;;
+    -o-transition: all .4s linear;;
+    transition: all .4s linear;;
+    -webkit-box-shadow:-3px 3px 2px #222;
+    -moz-box-shadow:-3px 3px 2px #222;
+    -o-box-shadow:-3px 3px 2px #222;
+    box-shadow:-3px 3px 2px #222;
+}
+
+
+.css-roadMap{
+    text-align:center;
+    margin:30px auto;
+    padding:15px;
+    background:#EEE
+}
+.css-roadMap .css-header{
+    color:#333;
+    font-size:40px;
+    border-bottom:2px solid #333;
+    width:400px;
+    margin:0px auto;
+    text-align: center;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+.css-roadMap .css-brief{
+    color:#333;
+    padding:10px;
+    width:100%;
+    margin:10px auto;
+    display:block;
+    text-transform:capitalize;
+    font-size:19px;
+}
+.css-roadMap .css-example{
+    color:#333;
+    font-size:24px;
+    font-weight:bold;
+    padding:10px;
+    width:800px;
+    margin: 10px auto;
+    text-align: left;
+    font-family:"Tw Cen MT", sans-serif;
+    display:flex;
+    flex-direction:column;
+    background:#EEE;
+    border-radius:4px;
+    -webkit-box-shadow:5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222;
+    -moz-box-shadow:5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222;
+    -o-box-shadow:5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222;
+    box-shadow:5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222;
+}
+.css-roadMap .css-example .css-example-detail{
+    padding:10px;
+    outline:none;
+}
+.css-roadMap .css-example .css-example-detail.go-right{
+    margin-left:50px;
+}
+.css-roadMap .css-example .css-example-detail.go-right-again{
+    margin-left:90px;
+}
+.css-roadMap .css-example .google-example{
+    padding:5px;
+    text-transform:uppercase;
+    color:#333;
+    cursor:pointer;
+    font-family:"Tw Cen MT", sans-serif;
+}
+.css-roadMap .css-example .a-tag{
+    padding:0px;
+    text-transform:lowercase;
+    color:#333;
+    text-decoration:none;;
+    cursor:text;
+    font-family:"Tw Cen MT", sans-serif;
+}
+.css-roadMap .css-btns{
+    margin:20px auto;
+    display:flex;
+    justify-content:center;
+}
+.css-roadMap .css-btns button{
+    font-size:21px;
+    padding:10px;
+    border-radius:20px;
+    width:260px;
+    border:0px;
+    cursor:pointer;
+    margin: 0px 10px;
+    text-transform:capitalize;
+    color:#EEE;
+    letter-spacing: 3px;
+    background:-webkit-linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    background:-moz-linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    background:-o-linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    background:linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    -webkit-transition: all .4s linear;;
+    -moz-transition: all .4s linear;;
+    -o-transition: all .4s linear;;
+    transition: all .4s linear;;
+    -webkit-box-shadow:-3px 3px 2px #222;
+    -moz-box-shadow:-3px 3px 2px #222;
+    -o-box-shadow:-3px 3px 2px #222;
+    box-shadow:-3px 3px 2px #222;
+}
+
+
+.js-roadMap{
+    text-align:center;
+    margin:0px auto;
+    padding:15px;
+}
+.js-roadMap .js-header{
+    color:#FFF;
+    font-size:40px;
+    border-bottom:2px solid #FFF;
+    width:550px;
+    margin:0px auto;
+    text-align: center;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+.js-roadMap .js-brief{
+    color:#EEE;
+    padding:10px;
+    width:100%;
+    margin:10px auto;
+    display:block;
+    text-transform:capitalize;
+    font-size:19px;
+}
+.js-roadMap .js-example{
+    color:#333;
+    font-size:24px;
+    font-weight:bold;
+    padding:10px;
+    width:800px;
+    margin: 10px auto;
+    text-align: left;
+    font-family:"Tw Cen MT", sans-serif;
+    display:flex;
+    flex-direction:column;
+    background:#EEE;
+    border-radius:4px;
+    -webkit-box-shadow:5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222;
+    -moz-box-shadow:5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222;
+    -o-box-shadow:5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222;
+    box-shadow:5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222, 5px 5px 8px #222;
+}
+.js-roadMap .js-example .js-example-detail{
+    padding:13px;
+    outline:none;
+}
+.js-roadMap .js-example .js-example-detail.go-right{
+    margin-left:50px;
+}
+.js-roadMap .js-example .js-example-detail.go-right-again{
+    margin-left:90px;
+}
+.js-roadMap .js-example .script-tag{
+    padding:0px;
+    text-transform:lowercase;
+    color:#333;
+    text-decoration:none;;
+    cursor:text;
+    font-family:"Tw Cen MT", sans-serif;
+}
+.js-roadMap .js-btns{
+    margin:20px auto;
+    display:flex;
+    justify-content:center;
+}
+.js-roadMap .js-btns button{
+    font-size:21px;
+    padding:10px;
+    border-radius:20px;
+    width:290px;
+    border:0px;
+    cursor:pointer;
+    margin: 0px 10px;
+    text-transform:capitalize;
+    color:#EEE;
+    letter-spacing: 3px;
+    background:-webkit-linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    background:-moz-linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    background:-o-linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    background:linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    -webkit-transition: all .4s linear;;
+    -moz-transition: all .4s linear;;
+    -o-transition: all .4s linear;;
+    transition: all .4s linear;;
+    -webkit-box-shadow:-3px 3px 2px #222;
+    -moz-box-shadow:-3px 3px 2px #222;
+    -o-box-shadow:-3px 3px 2px #222;
+    box-shadow:-3px 3px 2px #222;
+}
+
+.finish{
+    background:#EEE;
+    padding:10px;
+    margin: -10px auto;
+    display: flex;
+    min-height:400px;
+    justify-content:space-around;
+}
+.finish div > ul{
+    list-style-type:none;
+    text-align: left;
+}
+.finish div ul li{
+    text-align:left;
+    font-size:20px;
+    text-transform:capitalize;
+    cursor:pointer;
+    padding:8px;
+}
+.finish div ul li:hover{
+    text-decoration:underline;
+}
+.animation-end{
+    position:relative;
+    display: flex;
+    justify-content:center;
+}
+.animation-end .goodbye-message{
+    color:#EEE;
+    font-size:24px;
+    display:block;
+    margin-bottom:15px;
+    text-transform:capitalize;
+}
+.animation-end .waving-icon{
+    position:absolute;
+    animation-duration: .6s;
+    animation-timing-function: linear;
+    animation-direction:alternate-reverse;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+    animation-name: waving;
+    transition: all .5s linear;
+    font-size:80px;
+    color:#EEE;
+    margin-top: 95px;
+}
+@keyframes waving{
+    0%{
+        transform: rotate(60deg);
+    }
+    25%{
+        transform: rotate(30deg);
+    }
+    50%{
+        transform: rotate(-30deg);
+    }
+    75%{
+        transform: rotate(-60deg);
+    }
+    100%{
+        transform: rotate(-60deg);
+    }
+}
+.contactDiv{
+    position:fixed;
+    top: 0;
+    left: 0;
+    background:rgba(0,0,0,.9);
+    width:100%;
+    height:100%;
+    z-index: 2000;
+    padding:40px;
+    text-align:center;
+}
+.contactDiv .closeBtn{
+    position:absolute;
+    top: 0;
+    right: 15px;
+    color:#EEE;
+    cursor:pointer;
+    background:rgba(0,0,0,.9);
+    font-size:30px;
+    font-weight:bold;
+}
+.contactDiv form{
+    padding:15px;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    width:400px;
+    margin:10px auto;
+    background:-webkit-linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    background:-moz-linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    background:-o-linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+    background:linear-gradient(120deg, rgb(0,0,115),rgb(115,0,255));
+
+}
+.contactDiv form input{
+    width:70%;
+    margin: 25px auto;
+    padding:5px 10px;
+    background:#EEE;
+    color:#333;
+    font-size:21px;
+    border:0px;
+    outline:none;
+}
+.contactDiv form input:last-of-type{
+    cursor:pointer;
+    border-radius:20px;
+}
+.contactDiv form input::placeholder{
+    color:#333;
+    text-transform:capitalize;
+}
